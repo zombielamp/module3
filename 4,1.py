@@ -11,5 +11,3 @@ def register(login, passwd):
 	with open ('register.json', 'r') as f:
 		login = json.load(f)
 		passwd = json.load(f)
-
-	print (login, passwd)
