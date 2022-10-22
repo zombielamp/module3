@@ -1,6 +1,6 @@
-x=int(input())
-p=int(input())
-y=int(input())
+x=int(input('Сумма вклада '))
+p=int(input('Проценты '))
+y=int(input('Запрашиваемая сумма '))
 i=0
 while x<y:
 	x *= 1 + p / 100
