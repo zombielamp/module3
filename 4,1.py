@@ -1,13 +1,15 @@
 import json
 
-login = {'Login' : input('Введите логин ')}
-passwd = {'Password' : input('Введите пароль ')}
+name = [input('Введите логин ')]
+password = [input('Введите пароль ')]
+with open('reg.json', 'w') as f:
+	json.dump(name, f)
+	json.dump(password, f)
 
-with open ('register.json', 'w') as f:
-	json.dump(login, f)
-	json.dump(passwd, f)
 
 def register(login, passwd):
-	with open ('register.json', 'r') as f:
-		login = json.load(f)
-		passwd = json.load(f)
+	if login in name:
+		if passwd in password:
+			print(name, password)
+
+print(name, password)
