@@ -19,13 +19,10 @@ def register(login, psswd):
 def login_function(login, psswd):
 	with open('reg.json', 'r') as f:
 		data = json.load(f)
-	while true:
-		login = input('Введите логин ')
-		passwd = input('Введите пароль ')
-		if login and passwd in data.keys():
-			data[login] == data[passwd]
-			with open('reg.json', 'w') as f:
-				json.dump(data,f)
-			print('Добро пожаловать!')
-		else:
-			print('Неверный логин или пароль')
+	if login in data.keys():
+		if psswd == data[login]
+		with open('reg.json', 'w') as f:
+			json.dump(data,f)
+		print('Добро пожаловать!')
+	else:
+		print('Неверный логин или пароль')
